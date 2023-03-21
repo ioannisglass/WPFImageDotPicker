@@ -1,0 +1,20 @@
+﻿<Window x:Class="SkiPatrol.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkiPatrol"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1440" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown" Icon="icon.ico">
+    <Grid>
+        <Canvas x:Name="cvsMap" HorizontalAlignment="Left" Height="900" Margin="0,0,0,0" VerticalAlignment="Top" Width="1440" MouseRightButtonDown="cvsMap_MouseRightButtonDown">
+            <Canvas.ContextMenu>
+                <ContextMenu Name="contextMenu">
+                    <MenuItem Header="Draw Point" Click="drawMenuItem_Click"/>
+                    <MenuItem Header="Save" Click="saveMenuItem_Click" />
+                    <MenuItem Header="Close" Click="closeMenuItem_Click"/>
+                </ContextMenu>
+            </Canvas.ContextMenu>
+        </Canvas>
+    </Grid>
+</Window>
